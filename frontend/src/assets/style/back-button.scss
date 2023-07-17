@@ -1,0 +1,11 @@
+.button-back {
+  display: flex;
+  background-color: $app-bg-color;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 2rem;
+    margin: 0;
+  }
+}

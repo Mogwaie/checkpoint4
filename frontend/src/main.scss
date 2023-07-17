@@ -1,0 +1,64 @@
+@import "./assets/style/variable.scss";
+@import "./assets/style/card-bird.scss";
+@import "./assets/style/home.scss";
+@import "./assets/style/bird-description.scss";
+@import "./assets/style/header.scss";
+@import "./assets/style/bird-modif.scss";
+@import "./assets/style/back-button.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin-top: 70px;
+}
+
+body {
+  line-height: 1.5;
+  background-color: $app-bg-color;
+}
+
+h2 {
+  @include font-title(600, 24px);
+}
+
+p {
+  @include font-text(14px);
+}
+
+.primary-button {
+  @include primary-button(5rem, 2.5rem, 14px);
+}
+
+@media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
+  h2 {
+    @include font-title(600, 26px);
+  }
+
+  p {
+    @include font-text(18px);
+  }
+
+  .primary-button {
+    @include primary-button(7rem, 3rem, 18px);
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  h2 {
+    @include font-title(600, 28px);
+  }
+
+  p {
+    @include font-text(20px);
+  }
+
+  .primary-button {
+    @include primary-button(7rem, 3rem, 20px);
+  }
+}

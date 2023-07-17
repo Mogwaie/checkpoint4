@@ -1,0 +1,24 @@
+.home-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+
+  li {
+    margin-top: 3rem;
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
