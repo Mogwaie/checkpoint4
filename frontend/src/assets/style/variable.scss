@@ -1,0 +1,44 @@
+/* Website color*/
+$app-primary-font-color: #00bfa5;
+$app-supporting-color: #393844;
+$app-bg-color: #a8fff3;
+$app-box-shadox: #00bfa5;
+
+/* Media query */
+$app-mobile: 320px;
+$app-tablet: 768px;
+$app-desktop: 1024px;
+$app-desktop-medium: 1440px;
+
+/* Font */
+@mixin font-title($font-weight, $font-size) {
+  color: $app-primary-font-color;
+  font-weight: 600;
+  font-size: $font-size;
+}
+
+@mixin font-text($font-size) {
+  font-weight: normal;
+  font-size: $font-size;
+  color: $app-supporting-color;
+}
+
+/* Button */
+@mixin primary-button($width, $height, $font-size) {
+  background-color: $app-primary-font-color;
+  color: $app-supporting-color;
+  border-style: none;
+  border: solid 2px $app-supporting-color;
+  border-radius: 26px;
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $app-supporting-color;
+    color: $app-primary-font-color;
+    border: solid 2px $app-primary-font-color;
+  }
+}
