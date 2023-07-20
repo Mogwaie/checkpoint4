@@ -1,0 +1,22 @@
+.header-ctn {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $header-color;
+  color: white;
+  box-shadow: 0px 2px 16px rgb(76, 75, 74);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bird-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}

@@ -2,7 +2,12 @@
 $app-primary-font-color: #00bfa5;
 $app-supporting-color: #393844;
 $app-bg-color: #a8fff3;
+$header-color: #7dcbc0;
 $app-box-shadox: #00bfa5;
+
+/* button color */
+$bg-color-button: #177d6f;
+$border-button-color: #2b746c;
 
 /* Media query */
 $app-mobile: 320px;
@@ -25,10 +30,10 @@ $app-desktop-medium: 1440px;
 
 /* Button */
 @mixin primary-button($width, $height, $font-size) {
-  background-color: $app-primary-font-color;
-  color: $app-supporting-color;
+  background-color: $bg-color-button;
+  color: white;
   border-style: none;
-  border: solid 2px $app-supporting-color;
+  border: solid 2px $border-button-color;
   border-radius: 26px;
   width: $width;
   height: $height;

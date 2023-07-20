@@ -1,0 +1,11 @@
+.button-back {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  .back-button {
+    width: 2rem;
+    margin: 0;
+  }
+}

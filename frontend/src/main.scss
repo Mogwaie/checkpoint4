@@ -1,10 +1,13 @@
 @import "./assets/style/variable.scss";
-@import "./assets/style/card-bird.scss";
-@import "./assets/style/home.scss";
-@import "./assets/style/bird-description.scss";
-@import "./assets/style/header.scss";
-@import "./assets/style/bird-modif.scss";
-@import "./assets/style/back-button.scss";
+@import "./assets/style/components/card-bird.scss";
+@import "./assets/style/components/header.scss";
+@import "./assets/style/components/back-button.scss";
+@import "./assets/style/components/footer-home.scss";
+
+/* pages */
+@import "./assets/style/page/home.scss";
+@import "./assets/style/page/bird-description.scss";
+@import "./assets/style/page/bird-modif.scss";
 
 *,
 *::before,
@@ -20,7 +23,7 @@ main {
 
 body {
   line-height: 1.5;
-  background-color: $app-bg-color;
+  background: linear-gradient(#a8fff3 10%, $app-primary-font-color);
 }
 
 h2 {
