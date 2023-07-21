@@ -1,50 +1,61 @@
-.form-bird-description {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: center;
+.create-modif-conatiner {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: auto;
+  padding-top: 2rem;
 
-  .image-conatiner {
-    .image-bird {
-      width: 200px;
+  .form-bird-description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+
+    .image-conatiner {
+      .image-bird {
+        width: 200px;
+        margin-top: 1rem;
+      }
+    }
+
+    label {
       margin-top: 1rem;
     }
-  }
 
-  label {
-    margin-top: 1rem;
-  }
+    input,
+    textarea {
+      width: 80%;
+      border: 1px solid $bg-color-button;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      background-color: #e9fffc;
+    }
 
-  input,
-  textarea {
-    width: 80%;
-    border: 1px solid $app-supporting-color;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    background-color: #e9fffc;
-  }
+    input::placeholder,
+    textarea::placeholder {
+      color: $app-supporting-color;
+    }
 
-  input::placeholder,
-  textarea::placeholder {
-    color: $app-supporting-color;
-  }
+    input:hover,
+    textarea:hover {
+      cursor: pointer;
+    }
 
-  input:hover,
-  textarea:hover {
-    cursor: pointer;
-  }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border: solid 2px $app-primary-font-color;
+    }
 
-  input:focus,
-  textarea:focus {
-    outline: none;
-    border: solid 2px $app-primary-font-color;
-  }
-
-  .buttons {
-    margin: 1rem auto;
-    button {
-      margin: 1rem;
+    .buttons {
+      margin: 1rem auto;
+      button {
+        margin: 1rem;
+      }
     }
   }
 }

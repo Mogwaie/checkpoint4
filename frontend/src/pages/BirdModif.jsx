@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import BackButton from "../components/BackButton";
+import forest from "../assets/images/bg-forest.png";
 
 export default function BirdModif() {
   const { id } = useParams();
@@ -56,82 +57,87 @@ export default function BirdModif() {
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)} className="form-bird-description">
-      <BackButton path={`/card-bird/${selectedBird.bird_id}`} />
-      <label> Nom : </label>
-      <input
-        type="text"
-        placeholder={selectedBird.name}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <div className="image-conatiner">
-        <img
-          src={selectedBird.image}
-          alt={selectedBird.name}
-          className="image-bird"
+    <div
+      className="create-modif-conatiner"
+      style={{ backgroundImage: `url(${forest})` }}
+    >
+      <form onSubmit={(e) => handleSubmit(e)} className="form-bird-description">
+        <BackButton path={`/card-bird/${selectedBird.bird_id}`} />
+        <label> Nom : </label>
+        <input
+          type="text"
+          placeholder={selectedBird.name}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-      </div>
-      <label> Description : </label>
-      <textarea
-        type="text"
-        placeholder={selectedBird.description}
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        cols="30"
-        rows="10"
-      />
-      <label> Régime alimentaire: </label>
-      <textarea
-        type="text"
-        placeholder={selectedBird.food}
-        value={food}
-        onChange={(e) => setFood(e.target.value)}
-        cols="30"
-        rows="10"
-      />
-      <label> Taille: </label>
-      <input
-        type="text"
-        placeholder={selectedBird.size}
-        value={size}
-        onChange={(e) => setSize(e.target.value)}
-      />
-      <label> Poids : </label>
-      <input
-        type="text"
-        placeholder={selectedBird.weight}
-        value={weight}
-        onChange={(e) => setWeight(e.target.value)}
-      />
-      <label> Cris et chant : </label>
-      <textarea
-        type="text"
-        placeholder={selectedBird.song}
-        value={song}
-        onChange={(e) => setSong(e.target.value)}
-        cols="30"
-        rows="10"
-      />
-      <label> Protégé? </label>
-      <input
-        type="text"
-        placeholder={selectedBird.is_protected}
-        value={is_protected}
-        onChange={(e) => setIsProtected(e.target.value)}
-      />
-      <div className="buttons">
-        <button className="primary-button" type="submit">
-          Valider
-        </button>
-        <button
-          className="primary-button"
-          type="button"
-          onClick={handleOnClickSupp}
-        >
-          Supprimer
-        </button>
-      </div>
-    </form>
+        <div className="image-conatiner">
+          <img
+            src={selectedBird.image}
+            alt={selectedBird.name}
+            className="image-bird"
+          />
+        </div>
+        <label> Description : </label>
+        <textarea
+          type="text"
+          placeholder={selectedBird.description}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          cols="30"
+          rows="10"
+        />
+        <label> Régime alimentaire: </label>
+        <textarea
+          type="text"
+          placeholder={selectedBird.food}
+          value={food}
+          onChange={(e) => setFood(e.target.value)}
+          cols="30"
+          rows="10"
+        />
+        <label> Taille: </label>
+        <input
+          type="text"
+          placeholder={selectedBird.size}
+          value={size}
+          onChange={(e) => setSize(e.target.value)}
+        />
+        <label> Poids : </label>
+        <input
+          type="text"
+          placeholder={selectedBird.weight}
+          value={weight}
+          onChange={(e) => setWeight(e.target.value)}
+        />
+        <label> Cris et chant : </label>
+        <textarea
+          type="text"
+          placeholder={selectedBird.song}
+          value={song}
+          onChange={(e) => setSong(e.target.value)}
+          cols="30"
+          rows="10"
+        />
+        <label> Protégé? </label>
+        <input
+          type="text"
+          placeholder={selectedBird.is_protected}
+          value={is_protected}
+          onChange={(e) => setIsProtected(e.target.value)}
+        />
+        <div className="buttons">
+          <button className="primary-button" type="submit">
+            Valider
+          </button>
+          <button
+            className="primary-button"
+            type="button"
+            onClick={handleOnClickSupp}
+          >
+            Supprimer
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

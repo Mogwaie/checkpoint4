@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import BackButton from "../components/BackButton";
+import forest from "../assets/images/bg-forest.png";
 
 function CreateBird() {
   const [name, setName] = useState("");
@@ -42,7 +43,10 @@ function CreateBird() {
   };
 
   return (
-    <div>
+    <div
+      className="create-modif-conatiner"
+      style={{ backgroundImage: `url(${forest})` }}
+    >
       <form onSubmit={(e) => handleSubmit(e)} className="form-bird-description">
         <BackButton path={"/"} />
         <label> Nom : </label>
