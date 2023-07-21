@@ -10,7 +10,7 @@ function BackButton({ path }) {
   };
   return (
     <button className="button-back" type="button" onClick={handleClick}>
-      <img src={backArrow} alt="" />
+      <img src={backArrow} alt="" className="back-button" />
     </button>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import CardBird from "../components/CardBird";
+import FooterHome from "../components/FooterHome";
 
 export default function Home() {
   const [birdList, setBirdList] = useState([]);
@@ -23,11 +24,6 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <Link to="/create-bird">
-        <button type="button" className="primary-button">
-          créer
-        </button>
-      </Link>
       <ul>
         {birdList.map((bird) => {
           return (
@@ -39,6 +35,7 @@ export default function Home() {
           );
         })}
       </ul>
+      <FooterHome />
     </div>
   );
 }
