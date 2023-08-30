@@ -23,7 +23,8 @@ class BirdManager extends AbstractManager {
 
   addBird(bird) {
     return this.database.query(
-      `insert into ${this.table} (name, image, description, food, size, weight, song, is_protected ) values (?, ?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (name, image, description, food, size, weight, song, is_protected ) 
+      values (?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         bird.name,
         bird.url,
